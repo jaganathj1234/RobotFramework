@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200613 11:16:26.896" rpa="false">
+<suite id="s1" name="TC 001 StartCloseBrowser" source="C:\Users\jaganath\PycharmProjects\RobotFrameworkAutomation\TestCases\TC_001_StartCloseBrowser.robot">
+<test id="s1-t1" name="TC_001 Browser Start Close">
+<kw name="Start Browser and Maximize" library="Resources_browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200613 11:16:27.103" level="INFO">Opening browser 'Chrome' to base url 'http://demowebshop.tricentis.com/'.</msg>
+<status status="PASS" starttime="20200613 11:16:27.103" endtime="20200613 11:16:33.043"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200613 11:16:33.043" endtime="20200613 11:16:34.154"></status>
+</kw>
+<status status="PASS" starttime="20200613 11:16:27.102" endtime="20200613 11:16:34.154"></status>
+</kw>
+<status status="PASS" starttime="20200613 11:16:27.101" endtime="20200613 11:16:34.155" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TC_002 Register">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[text()='Register']</arg>
+</arguments>
+<msg timestamp="20200613 11:16:34.157" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20200613 11:16:34.157" endtime="20200613 11:16:34.874"></status>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>Gender</arg>
+<arg>M</arg>
+</arguments>
+<msg timestamp="20200613 11:16:34.874" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20200613 11:16:34.874" endtime="20200613 11:16:34.965"></status>
+</kw>
+<kw name="Enter FirstName and LastName" library="Resources_browser">
+<arguments>
+<arg>jag1</arg>
+<arg>jay1</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:FirstName</arg>
+<arg>${Fname}</arg>
+</arguments>
+<msg timestamp="20200613 11:16:34.966" level="INFO">Typing text 'jag1' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20200613 11:16:34.966" endtime="20200613 11:16:35.097"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:LastName</arg>
+<arg>${Lname}</arg>
+</arguments>
+<msg timestamp="20200613 11:16:35.097" level="INFO">Typing text 'jay1' into text field 'name:LastName'.</msg>
+<status status="PASS" starttime="20200613 11:16:35.097" endtime="20200613 11:16:35.220"></status>
+</kw>
+<status status="PASS" starttime="20200613 11:16:34.965" endtime="20200613 11:16:35.220"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:Email</arg>
+<arg>jag4@jag.com</arg>
+</arguments>
+<msg timestamp="20200613 11:16:35.221" level="INFO">Typing text 'jag4@jag.com' into text field 'name:Email'.</msg>
+<status status="PASS" starttime="20200613 11:16:35.220" endtime="20200613 11:16:35.355"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:Password</arg>
+<arg>ps1234</arg>
+</arguments>
+<msg timestamp="20200613 11:16:35.355" level="INFO">Typing text 'ps1234' into text field 'name:Password'.</msg>
+<status status="PASS" starttime="20200613 11:16:35.355" endtime="20200613 11:16:35.483"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:ConfirmPassword</arg>
+<arg>ps1234</arg>
+</arguments>
+<msg timestamp="20200613 11:16:35.483" level="INFO">Typing text 'ps1234' into text field 'name:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20200613 11:16:35.483" endtime="20200613 11:16:35.613"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>name:register-button</arg>
+</arguments>
+<msg timestamp="20200613 11:16:35.614" level="INFO">Clicking button 'name:register-button'.</msg>
+<status status="PASS" starttime="20200613 11:16:35.613" endtime="20200613 11:16:36.494"></status>
+</kw>
+<status status="PASS" starttime="20200613 11:16:34.156" endtime="20200613 11:16:36.494" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200613 11:16:26.899" endtime="20200613 11:16:36.496"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="TC 001 StartCloseBrowser">TC 001 StartCloseBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

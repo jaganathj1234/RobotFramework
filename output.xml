@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200617 13:07:19.162" rpa="false">
+<suite id="s1" name="TestCases" source="C:\Users\jaganath\PycharmProjects\RobotFrameworkAutomation\TestCases">
+<suite id="s1-s1" name="TC 001 Register" source="C:\Users\jaganath\PycharmProjects\RobotFrameworkAutomation\TestCases\TC_001_Register.robot">
+<test id="s1-s1-t1" name="TC_001 Browser Start">
+<kw name="Start Browser and Maximize" library="Resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:19.392" level="INFO">Opening browser 'Chrome' to base url 'http://demowebshop.tricentis.com/'.</msg>
+<status status="PASS" starttime="20200617 13:07:19.392" endtime="20200617 13:07:25.595"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200617 13:07:25.596" endtime="20200617 13:07:26.714"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:19.391" endtime="20200617 13:07:26.714"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:19.391" endtime="20200617 13:07:26.715" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="TC_002 Register">
+<kw name="Click Register Link" library="Resources">
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>DemoWebMainPage.register_link</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:26.719" level="INFO">${loc} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20200617 13:07:26.718" endtime="20200617 13:07:26.719"></status>
+</kw>
+<msg timestamp="20200617 13:07:26.719" level="INFO">${elementloc} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20200617 13:07:26.717" endtime="20200617 13:07:26.719"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:26.720" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20200617 13:07:26.719" endtime="20200617 13:07:27.508"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:26.717" endtime="20200617 13:07:27.509"></status>
+</kw>
+<kw name="Enter Gender" library="Resources">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>Gender</arg>
+<arg>M</arg>
+</arguments>
+<msg timestamp="20200617 13:07:27.509" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20200617 13:07:27.509" endtime="20200617 13:07:27.611"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:27.509" endtime="20200617 13:07:27.611"></status>
+</kw>
+<kw name="Enter FirstName and LastName" library="Resources">
+<arguments>
+<arg>jag1</arg>
+<arg>jay1</arg>
+</arguments>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>RegisterPage.first_name</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:27.614" level="INFO">${loc} = FirstName</msg>
+<status status="PASS" starttime="20200617 13:07:27.613" endtime="20200617 13:07:27.614"></status>
+</kw>
+<msg timestamp="20200617 13:07:27.615" level="INFO">${elementloc} = FirstName</msg>
+<status status="PASS" starttime="20200617 13:07:27.612" endtime="20200617 13:07:27.615"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${Fname}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:27.615" level="INFO">Typing text 'jag1' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20200617 13:07:27.615" endtime="20200617 13:07:27.756"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>RegisterPage.last_name</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:27.757" level="INFO">${loc} = LastName</msg>
+<status status="PASS" starttime="20200617 13:07:27.756" endtime="20200617 13:07:27.757"></status>
+</kw>
+<msg timestamp="20200617 13:07:27.757" level="INFO">${elementloc} = LastName</msg>
+<status status="PASS" starttime="20200617 13:07:27.756" endtime="20200617 13:07:27.757"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${Lname}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:27.758" level="INFO">Typing text 'jay1' into text field 'name:LastName'.</msg>
+<status status="PASS" starttime="20200617 13:07:27.757" endtime="20200617 13:07:27.888"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:27.612" endtime="20200617 13:07:27.888"></status>
+</kw>
+<kw name="Enter Email" library="Resources">
+<arguments>
+<arg>jag7@jag.com</arg>
+</arguments>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>RegisterPage.email_id</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:27.890" level="INFO">${loc} = Email</msg>
+<status status="PASS" starttime="20200617 13:07:27.889" endtime="20200617 13:07:27.890"></status>
+</kw>
+<msg timestamp="20200617 13:07:27.890" level="INFO">${elementloc} = Email</msg>
+<status status="PASS" starttime="20200617 13:07:27.889" endtime="20200617 13:07:27.890"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${Email}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:27.890" level="INFO">Typing text 'jag7@jag.com' into text field 'name:Email'.</msg>
+<status status="PASS" starttime="20200617 13:07:27.890" endtime="20200617 13:07:28.029"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:27.888" endtime="20200617 13:07:28.029"></status>
+</kw>
+<kw name="Enter Password" library="Resources">
+<arguments>
+<arg>ps1234</arg>
+<arg>ps1234</arg>
+</arguments>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>RegisterPage.pass</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:28.031" level="INFO">${loc} = Password</msg>
+<status status="PASS" starttime="20200617 13:07:28.030" endtime="20200617 13:07:28.031"></status>
+</kw>
+<msg timestamp="20200617 13:07:28.031" level="INFO">${elementloc} = Password</msg>
+<status status="PASS" starttime="20200617 13:07:28.030" endtime="20200617 13:07:28.031"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:28.031" level="INFO">Typing text 'ps1234' into text field 'name:Password'.</msg>
+<status status="PASS" starttime="20200617 13:07:28.031" endtime="20200617 13:07:28.164"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>RegisterPage.confirm_pass</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:28.165" level="INFO">${loc} = ConfirmPassword</msg>
+<status status="PASS" starttime="20200617 13:07:28.165" endtime="20200617 13:07:28.165"></status>
+</kw>
+<msg timestamp="20200617 13:07:28.166" level="INFO">${elementloc} = ConfirmPassword</msg>
+<status status="PASS" starttime="20200617 13:07:28.164" endtime="20200617 13:07:28.166"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${cpass}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:28.166" level="INFO">Typing text 'ps1234' into text field 'name:ConfirmPassword'.</msg>
+<status status="PASS" starttime="20200617 13:07:28.166" endtime="20200617 13:07:28.297"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:28.029" endtime="20200617 13:07:28.297"></status>
+</kw>
+<kw name="Click Register Button" library="Resources">
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>RegisterPage.register_but</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:28.299" level="INFO">${loc} = register-button</msg>
+<status status="PASS" starttime="20200617 13:07:28.299" endtime="20200617 13:07:28.299"></status>
+</kw>
+<msg timestamp="20200617 13:07:28.300" level="INFO">${elementloc} = register-button</msg>
+<status status="PASS" starttime="20200617 13:07:28.298" endtime="20200617 13:07:28.300"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:28.300" level="INFO">Clicking button 'name:register-button'.</msg>
+<status status="PASS" starttime="20200617 13:07:28.300" endtime="20200617 13:07:29.242"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:28.298" endtime="20200617 13:07:29.242"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:26.716" endtime="20200617 13:07:29.242" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="TC_003 Login">
+<kw name="Login To Website" library="Resources">
+<arguments>
+<arg>jag7@jag.com</arg>
+<arg>ps1234</arg>
+</arguments>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>DemoWebMainPage.login_link</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:29.245" level="INFO">${loc} = //a[text()='Log in']</msg>
+<status status="PASS" starttime="20200617 13:07:29.245" endtime="20200617 13:07:29.245"></status>
+</kw>
+<msg timestamp="20200617 13:07:29.246" level="INFO">${elementloc} = //a[text()='Log in']</msg>
+<status status="PASS" starttime="20200617 13:07:29.244" endtime="20200617 13:07:29.246"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:29.246" level="INFO">Clicking link 'xpath://a[text()='Log in']'.</msg>
+<status status="PASS" starttime="20200617 13:07:29.246" endtime="20200617 13:07:29.933"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>LoginPage.email_id</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:29.935" level="INFO">${loc} = Email</msg>
+<status status="PASS" starttime="20200617 13:07:29.934" endtime="20200617 13:07:29.935"></status>
+</kw>
+<msg timestamp="20200617 13:07:29.935" level="INFO">${elementloc} = Email</msg>
+<status status="PASS" starttime="20200617 13:07:29.933" endtime="20200617 13:07:29.935"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${Email}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:29.936" level="INFO">Typing text 'jag7@jag.com' into text field 'name:Email'.</msg>
+<status status="PASS" starttime="20200617 13:07:29.935" endtime="20200617 13:07:30.042"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>LoginPage.pass</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:30.043" level="INFO">${loc} = Password</msg>
+<status status="PASS" starttime="20200617 13:07:30.043" endtime="20200617 13:07:30.043"></status>
+</kw>
+<msg timestamp="20200617 13:07:30.044" level="INFO">${elementloc} = Password</msg>
+<status status="PASS" starttime="20200617 13:07:30.042" endtime="20200617 13:07:30.044"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${Pass}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:30.044" level="INFO">Typing text 'ps1234' into text field 'name:Password'.</msg>
+<status status="PASS" starttime="20200617 13:07:30.044" endtime="20200617 13:07:30.163"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>LoginPage.login_but</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:30.165" level="INFO">${loc} = //input[@class='button-1 login-button']</msg>
+<status status="PASS" starttime="20200617 13:07:30.164" endtime="20200617 13:07:30.165"></status>
+</kw>
+<msg timestamp="20200617 13:07:30.165" level="INFO">${elementloc} = //input[@class='button-1 login-button']</msg>
+<status status="PASS" starttime="20200617 13:07:30.163" endtime="20200617 13:07:30.165"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:30.166" level="INFO">Clicking button 'xpath://input[@class='button-1 login-button']'.</msg>
+<status status="PASS" starttime="20200617 13:07:30.165" endtime="20200617 13:07:31.217"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:29.244" endtime="20200617 13:07:31.217"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:29.243" endtime="20200617 13:07:31.218" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="TC_004 ShopItem">
+<kw name="Shop for Items" library="Resources">
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>DemoWebMainPage.books_link</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:31.223" level="INFO">${loc} = //a[contains(text(),'Books')]</msg>
+<status status="PASS" starttime="20200617 13:07:31.222" endtime="20200617 13:07:31.223"></status>
+</kw>
+<msg timestamp="20200617 13:07:31.223" level="INFO">${elementloc} = //a[contains(text(),'Books')]</msg>
+<status status="PASS" starttime="20200617 13:07:31.221" endtime="20200617 13:07:31.224"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:31.224" level="INFO">Clicking link 'xpath://a[contains(text(),'Books')]'.</msg>
+<status status="PASS" starttime="20200617 13:07:31.224" endtime="20200617 13:07:32.691"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>BooksSelectionPage.book_addToCart</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:32.692" level="INFO">${loc} = //a[text()='Computing and Internet']/following::input[1]</msg>
+<status status="PASS" starttime="20200617 13:07:32.692" endtime="20200617 13:07:32.692"></status>
+</kw>
+<msg timestamp="20200617 13:07:32.693" level="INFO">${elementloc} = //a[text()='Computing and Internet']/following::input[1]</msg>
+<status status="PASS" starttime="20200617 13:07:32.691" endtime="20200617 13:07:32.693"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:32.693" level="INFO">Clicking button 'xpath://a[text()='Computing and Internet']/following::input[1]'.</msg>
+<status status="PASS" starttime="20200617 13:07:32.693" endtime="20200617 13:07:32.802"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:31.220" endtime="20200617 13:07:32.802"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200617 13:07:34.803" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200617 13:07:32.803" endtime="20200617 13:07:34.803"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:31.220" endtime="20200617 13:07:34.804" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="TC_005 CheckoutCart">
+<kw name="View Shopping Cart" library="Resources">
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>DemoWebMainPage.cart_link</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:34.808" level="INFO">${loc} = //div[@class='header-links']/ul/li[2]/a/following::span[1]</msg>
+<status status="PASS" starttime="20200617 13:07:34.807" endtime="20200617 13:07:34.808"></status>
+</kw>
+<msg timestamp="20200617 13:07:34.808" level="INFO">${elementloc} = //div[@class='header-links']/ul/li[2]/a/following::span[1]</msg>
+<status status="PASS" starttime="20200617 13:07:34.807" endtime="20200617 13:07:34.808"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:34.809" level="INFO">Clicking element 'xpath://div[@class='header-links']/ul/li[2]/a/following::span[1]'.</msg>
+<status status="PASS" starttime="20200617 13:07:34.808" endtime="20200617 13:07:35.654"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>CheckOutPage.country_sel</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:35.656" level="INFO">${loc} = //select[@name='CountryId']</msg>
+<status status="PASS" starttime="20200617 13:07:35.655" endtime="20200617 13:07:35.656"></status>
+</kw>
+<msg timestamp="20200617 13:07:35.656" level="INFO">${elementloc} = //select[@name='CountryId']</msg>
+<status status="PASS" starttime="20200617 13:07:35.655" endtime="20200617 13:07:35.656"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200617 13:07:35.656" level="INFO">Selecting options from selection list 'xpath://select[@name='CountryId']' by index 2.</msg>
+<status status="PASS" starttime="20200617 13:07:35.656" endtime="20200617 13:07:35.816"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>CheckOutPage.TAC</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:35.817" level="INFO">${loc} = termsofservice</msg>
+<status status="PASS" starttime="20200617 13:07:35.817" endtime="20200617 13:07:35.817"></status>
+</kw>
+<msg timestamp="20200617 13:07:35.817" level="INFO">${elementloc} = termsofservice</msg>
+<status status="PASS" starttime="20200617 13:07:35.816" endtime="20200617 13:07:35.818"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:35.818" level="INFO">Selecting checkbox 'name:termsofservice'.</msg>
+<status status="PASS" starttime="20200617 13:07:35.818" endtime="20200617 13:07:35.937"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>CheckOutPage.checkout_but</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:35.939" level="INFO">${loc} = checkout</msg>
+<status status="PASS" starttime="20200617 13:07:35.938" endtime="20200617 13:07:35.939"></status>
+</kw>
+<msg timestamp="20200617 13:07:35.939" level="INFO">${elementloc} = checkout</msg>
+<status status="PASS" starttime="20200617 13:07:35.938" endtime="20200617 13:07:35.939"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:35.939" level="INFO">Clicking button 'name:checkout'.</msg>
+<status status="PASS" starttime="20200617 13:07:35.939" endtime="20200617 13:07:37.736"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:34.807" endtime="20200617 13:07:37.736"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200617 13:07:39.738" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200617 13:07:37.736" endtime="20200617 13:07:39.738"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:34.806" endtime="20200617 13:07:39.738" critical="yes"></status>
+</test>
+<test id="s1-s1-t6" name="TC_006 BillingAddress">
+<kw name="Billing Address" library="Resources">
+<arguments>
+<arg>mindtree</arg>
+<arg>Sydney</arg>
+<arg>address1</arg>
+<arg>address2</arg>
+<arg>2066</arg>
+<arg>1212121</arg>
+<arg>989797</arg>
+</arguments>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>BillingAddress.company</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:39.742" level="INFO">${loc} = BillingNewAddress.Company</msg>
+<status status="PASS" starttime="20200617 13:07:39.742" endtime="20200617 13:07:39.742"></status>
+</kw>
+<msg timestamp="20200617 13:07:39.742" level="INFO">${elementloc} = BillingNewAddress.Company</msg>
+<status status="PASS" starttime="20200617 13:07:39.741" endtime="20200617 13:07:39.742"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${company}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:39.743" level="INFO">Typing text 'mindtree' into text field 'name:BillingNewAddress.Company'.</msg>
+<status status="PASS" starttime="20200617 13:07:39.743" endtime="20200617 13:07:39.897"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>BillingAddress.country</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:39.898" level="INFO">${loc} = BillingNewAddress.CountryId</msg>
+<status status="PASS" starttime="20200617 13:07:39.898" endtime="20200617 13:07:39.898"></status>
+</kw>
+<msg timestamp="20200617 13:07:39.899" level="INFO">${elementloc} = BillingNewAddress.CountryId</msg>
+<status status="PASS" starttime="20200617 13:07:39.897" endtime="20200617 13:07:39.899"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200617 13:07:39.899" level="INFO">Selecting options from selection list 'name:BillingNewAddress.CountryId' by index 2.</msg>
+<status status="PASS" starttime="20200617 13:07:39.899" endtime="20200617 13:07:40.039"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>BillingAddress.city</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:40.040" level="INFO">${loc} = BillingNewAddress.City</msg>
+<status status="PASS" starttime="20200617 13:07:40.040" endtime="20200617 13:07:40.041"></status>
+</kw>
+<msg timestamp="20200617 13:07:40.041" level="INFO">${elementloc} = BillingNewAddress.City</msg>
+<status status="PASS" starttime="20200617 13:07:40.039" endtime="20200617 13:07:40.041"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${city}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:40.041" level="INFO">Typing text 'Sydney' into text field 'name:BillingNewAddress.City'.</msg>
+<status status="PASS" starttime="20200617 13:07:40.041" endtime="20200617 13:07:40.209"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>BillingAddress.address1</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:40.210" level="INFO">${loc} = BillingNewAddress.Address1</msg>
+<status status="PASS" starttime="20200617 13:07:40.209" endtime="20200617 13:07:40.210"></status>
+</kw>
+<msg timestamp="20200617 13:07:40.210" level="INFO">${elementloc} = BillingNewAddress.Address1</msg>
+<status status="PASS" starttime="20200617 13:07:40.209" endtime="20200617 13:07:40.210"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${address1}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:40.211" level="INFO">Typing text 'address1' into text field 'name:BillingNewAddress.Address1'.</msg>
+<status status="PASS" starttime="20200617 13:07:40.210" endtime="20200617 13:07:40.388"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>BillingAddress.address2</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:40.389" level="INFO">${loc} = BillingNewAddress.Address2</msg>
+<status status="PASS" starttime="20200617 13:07:40.388" endtime="20200617 13:07:40.389"></status>
+</kw>
+<msg timestamp="20200617 13:07:40.389" level="INFO">${elementloc} = BillingNewAddress.Address2</msg>
+<status status="PASS" starttime="20200617 13:07:40.388" endtime="20200617 13:07:40.389"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${address2}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:40.390" level="INFO">Typing text 'address2' into text field 'name:BillingNewAddress.Address2'.</msg>
+<status status="PASS" starttime="20200617 13:07:40.389" endtime="20200617 13:07:40.560"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>BillingAddress.zip</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:40.562" level="INFO">${loc} = BillingNewAddress.ZipPostalCode</msg>
+<status status="PASS" starttime="20200617 13:07:40.561" endtime="20200617 13:07:40.562"></status>
+</kw>
+<msg timestamp="20200617 13:07:40.562" level="INFO">${elementloc} = BillingNewAddress.ZipPostalCode</msg>
+<status status="PASS" starttime="20200617 13:07:40.561" endtime="20200617 13:07:40.562"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${zip}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:40.563" level="INFO">Typing text '2066' into text field 'name:BillingNewAddress.ZipPostalCode'.</msg>
+<status status="PASS" starttime="20200617 13:07:40.562" endtime="20200617 13:07:40.713"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>BillingAddress.phone</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:40.714" level="INFO">${loc} = BillingNewAddress.PhoneNumber</msg>
+<status status="PASS" starttime="20200617 13:07:40.714" endtime="20200617 13:07:40.714"></status>
+</kw>
+<msg timestamp="20200617 13:07:40.715" level="INFO">${elementloc} = BillingNewAddress.PhoneNumber</msg>
+<status status="PASS" starttime="20200617 13:07:40.713" endtime="20200617 13:07:40.715"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:40.715" level="INFO">Typing text '1212121' into text field 'name:BillingNewAddress.PhoneNumber'.</msg>
+<status status="PASS" starttime="20200617 13:07:40.715" endtime="20200617 13:07:40.876"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>BillingAddress.fax</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:40.877" level="INFO">${loc} = BillingNewAddress.FaxNumber</msg>
+<status status="PASS" starttime="20200617 13:07:40.877" endtime="20200617 13:07:40.877"></status>
+</kw>
+<msg timestamp="20200617 13:07:40.877" level="INFO">${elementloc} = BillingNewAddress.FaxNumber</msg>
+<status status="PASS" starttime="20200617 13:07:40.876" endtime="20200617 13:07:40.878"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:${elementloc}</arg>
+<arg>${fax}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:40.878" level="INFO">Typing text '989797' into text field 'name:BillingNewAddress.FaxNumber'.</msg>
+<status status="PASS" starttime="20200617 13:07:40.878" endtime="20200617 13:07:41.032"></status>
+</kw>
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>BillingAddress.continue_but</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:41.033" level="INFO">${loc} = //input[@onclick='Billing.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:41.033" endtime="20200617 13:07:41.033"></status>
+</kw>
+<msg timestamp="20200617 13:07:41.033" level="INFO">${elementloc} = //input[@onclick='Billing.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:41.032" endtime="20200617 13:07:41.034"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:41.034" level="INFO">Clicking button 'xpath://input[@onclick='Billing.save()']'.</msg>
+<status status="PASS" starttime="20200617 13:07:41.034" endtime="20200617 13:07:41.136"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:39.741" endtime="20200617 13:07:41.137"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:39.740" endtime="20200617 13:07:41.137" critical="yes"></status>
+</test>
+<test id="s1-s1-t7" name="TC_007 CompleteOrder">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200617 13:07:43.140" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200617 13:07:41.139" endtime="20200617 13:07:43.140"></status>
+</kw>
+<kw name="Shipping Address" library="Resources">
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>ShippingAddress.continue_but</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:43.142" level="INFO">${loc} = //input[@onclick='Shipping.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:43.141" endtime="20200617 13:07:43.142"></status>
+</kw>
+<msg timestamp="20200617 13:07:43.142" level="INFO">${elementloc} = //input[@onclick='Shipping.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:43.141" endtime="20200617 13:07:43.142"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:43.143" level="INFO">Clicking button 'xpath://input[@onclick='Shipping.save()']'.</msg>
+<status status="PASS" starttime="20200617 13:07:43.143" endtime="20200617 13:07:43.239"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:43.141" endtime="20200617 13:07:43.239"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200617 13:07:45.241" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200617 13:07:43.240" endtime="20200617 13:07:45.241"></status>
+</kw>
+<kw name="Shipping Method" library="Resources">
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>ShippingMethod.continue_but</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:45.243" level="INFO">${loc} = //input[@onclick='ShippingMethod.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:45.242" endtime="20200617 13:07:45.243"></status>
+</kw>
+<msg timestamp="20200617 13:07:45.243" level="INFO">${elementloc} = //input[@onclick='ShippingMethod.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:45.242" endtime="20200617 13:07:45.243"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:45.243" level="INFO">Clicking button 'xpath://input[@onclick='ShippingMethod.save()']'.</msg>
+<status status="PASS" starttime="20200617 13:07:45.243" endtime="20200617 13:07:45.349"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:45.241" endtime="20200617 13:07:45.350"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200617 13:07:47.352" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200617 13:07:45.350" endtime="20200617 13:07:47.352"></status>
+</kw>
+<kw name="Payment Mode" library="Resources">
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>Paymentmode.continue_but</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:47.354" level="INFO">${loc} = //input[@onclick='PaymentMethod.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:47.353" endtime="20200617 13:07:47.354"></status>
+</kw>
+<msg timestamp="20200617 13:07:47.354" level="INFO">${elementloc} = //input[@onclick='PaymentMethod.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:47.353" endtime="20200617 13:07:47.354"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:47.354" level="INFO">Clicking button 'xpath://input[@onclick='PaymentMethod.save()']'.</msg>
+<status status="PASS" starttime="20200617 13:07:47.354" endtime="20200617 13:07:47.458"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:47.352" endtime="20200617 13:07:47.458"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200617 13:07:49.461" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200617 13:07:47.459" endtime="20200617 13:07:49.461"></status>
+</kw>
+<kw name="Payment Info" library="Resources">
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>PaymentInfo.continue_but</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:49.463" level="INFO">${loc} = //input[@onclick='PaymentInfo.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:49.462" endtime="20200617 13:07:49.463"></status>
+</kw>
+<msg timestamp="20200617 13:07:49.463" level="INFO">${elementloc} = //input[@onclick='PaymentInfo.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:49.462" endtime="20200617 13:07:49.463"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:49.464" level="INFO">Clicking button 'xpath://input[@onclick='PaymentInfo.save()']'.</msg>
+<status status="PASS" starttime="20200617 13:07:49.463" endtime="20200617 13:07:49.560"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:49.462" endtime="20200617 13:07:49.560"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200617 13:07:51.563" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200617 13:07:49.561" endtime="20200617 13:07:51.563"></status>
+</kw>
+<kw name="Confirm Order" library="Resources">
+<kw name="Element Locator Keyword" library="Resources">
+<arguments>
+<arg>ConfirmOrder.continue_but</arg>
+</arguments>
+<assign>
+<var>${elementloc}</var>
+</assign>
+<kw name="Read Locator From Json" library="locators">
+<arguments>
+<arg>${pathJson}</arg>
+</arguments>
+<assign>
+<var>${loc}</var>
+</assign>
+<msg timestamp="20200617 13:07:51.565" level="INFO">${loc} = //input[@onclick='ConfirmOrder.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:51.564" endtime="20200617 13:07:51.565"></status>
+</kw>
+<msg timestamp="20200617 13:07:51.565" level="INFO">${elementloc} = //input[@onclick='ConfirmOrder.save()']</msg>
+<status status="PASS" starttime="20200617 13:07:51.564" endtime="20200617 13:07:51.565"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:${elementloc}</arg>
+</arguments>
+<msg timestamp="20200617 13:07:51.566" level="INFO">Clicking button 'xpath://input[@onclick='ConfirmOrder.save()']'.</msg>
+<status status="PASS" starttime="20200617 13:07:51.565" endtime="20200617 13:07:51.667"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:51.564" endtime="20200617 13:07:51.667"></status>
+</kw>
+<status status="PASS" starttime="20200617 13:07:41.138" endtime="20200617 13:07:51.667" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200617 13:07:19.191" endtime="20200617 13:07:51.670"></status>
+</suite>
+<status status="PASS" starttime="20200617 13:07:19.164" endtime="20200617 13:07:51.676"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0">Critical Tests</stat>
+<stat pass="7" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="7" fail="0" id="s1-s1" name="TC 001 Register">TestCases.TC 001 Register</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200617 13:07:19.379" level="ERROR">Error in resource file 'C:\Users\jaganath\PycharmProjects\RobotFrameworkAutomation\Resources\Resources.robot': Creating keyword ' #' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20200617 13:07:19.387" level="ERROR">Error in file 'C:\Users\jaganath\PycharmProjects\RobotFrameworkAutomation\Resources\Resources.robot' on line 4: Importing test library '../Resources/Resources.robot' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  D:\Python382\Scripts\robot.exe
+  d:\python382\python38.zip
+  d:\python382\DLLs
+  d:\python382\lib
+  d:\python382
+  d:\python382\lib\site-packages</msg>
+</errors>
+</robot>
